@@ -4,7 +4,8 @@
 	"description": "Start template",
 	"main": "app.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"lint": "eslint ./app/js/app.js",
+		"lint:fix": "eslint ./app/js/app.js --fix"
 	},
 	"author": "Mykola Hubytskyi <hubytskyi@gmail.com",
 	"license": "ISC",
@@ -12,6 +13,12 @@
 		"bootstrap": "^4.4.1",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb": "^18.1.0",
+		"eslint-plugin-html": "^6.0.1",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.2",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-clean-css": "^4.2.0",
@@ -22,5 +29,7 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^2.0.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"eslint-config-prettier": "^6.10.1"
+	}
 }

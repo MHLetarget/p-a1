@@ -1,10 +1,43 @@
 @import config
 
-@import 0-base/404.sass
-@import 0-base/buttons.sass
+@import 0-base/404
+@import 0-base/buttons
+@import 0-base/soc-networks
+@import 0-base/forms
+@import 0-base/select
+@import 0-base/footer
 
-@import 1-section/header.sass
+@import 1-pages/home.sass
 
 // CUSTOM USER STYLES
 
+.link__underline
+	color: $white
+	position: relative
+	&:hover
+		color: $white
+		text-decoration: none
+	&::after
+		transition: 0.35s
+		content: ''
+		position: absolute
+		background: $white
+		width: 0
+		height: 3px
+		bottom: -1.5px
+		left: 0
+	&:hover::after
+		width: 100%
 
+.title
+	font-family: Josefin Sans
+	font-weight: normal
+	font-style: normal
+	font-size: 50px
+	line-height: 60px
+
+.title--blue
+	color: $accent
+
+.overlay
+	background: linear-gradient(202.46deg, rgba(25, 104, 179, 0.8) -106.3%, rgba(76, 151, 221, 0.8) 73.07%)
