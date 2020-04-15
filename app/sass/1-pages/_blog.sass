@@ -1,0 +1,92 @@
+.blog
+	padding-bottom: 3.333vw
+	
+.blog__header
+	width: 47.604vw
+	height: 9.479vw
+	margin: -4.740vw auto 30px
+	background: $white
+	box-shadow: 0px -22px 12px rgba(0, 0, 0, 0.15)
+
+.blog__items
+	max-width: 47.656vw
+	margin: 0 auto
+
+.blog__item
+	margin-bottom: 1.771vw
+
+.blog__img
+	border-radius: 4px
+	max-width: 100%
+
+.blog__title
+	font-size: 1.302vw
+	line-height: 1.823vw
+	font-weight: 500
+	margin: 16px 0 8px
+
+.blog__descr
+	height: 3.906vw
+	overflow: hidden
+	font-size: 16px
+	color: $darkgrey
+
+.blog__view-more
+	color: $accent
+	text-transform: uppercase
+	font-size: 0.781vw
+	line-height: 1.302vw
+	position: relative
+	font-weight: 600
+	background: none
+	padding-left: 0
+	margin-top: 0.417vw
+	&::after
+		content: ''
+		background-image: url(../images/icons/view-more-right.svg)
+		position: absolute
+		right: -0.938vw
+		width: 1.042vw
+		height: 0.521vw
+		background-repeat: no-repeat
+		background-size: contain
+		top: 50%
+		transform: translateY(-50%)
+		transition: 0.35s
+	&:hover::after
+		right: -1.146vw
+
+.blog__pagination
+	margin-top: 0.313vw
+
+.pagination
+	display: flex
+	justify-content: center
+
+.pagination__arrows
+	cursor: pointer
+	display: flex
+	align-items: center
+
+.pagination__items
+	display: flex
+	padding: 0 0.625vw
+
+.pagination__item
+	cursor: pointer
+	width: 2.083vw
+	height: 2.083vw
+	color: $accent
+	border-radius: 4px
+	background: none
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: 0.35s
+	border: 1px solid transparent
+	&:hover
+		border: 1px solid $accent
+
+.pagination__item--active
+	background: $accent
+	color: $white

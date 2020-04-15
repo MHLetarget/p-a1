@@ -1,0 +1,131 @@
+.tryforfree
+	padding-top: 3.125vw
+	
+.tryforfree__block
+	display: flex
+	flex-direction: column
+	text-align: center
+	justify-content: center
+	width: 100%
+
+.tryforfree__title
+	width: 56.406vw
+	margin-bottom: 1.458vw
+	margin: 0 auto
+
+.tryforfree__image
+	margin-bottom: 3.594vw
+
+.tryforfree__img
+	max-width: 47.604vw
+
+.tryforfree__text
+	text-align: left
+	color: $darkgrey
+	max-width: 47.656vw
+	margin: 0 auto
+
+.tryforfree__form
+	padding-top: 3.594vw
+
+.tryforfree__form-block
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: 100%
+
+.tryforfree__form-title
+	margin: 0 auto
+	margin-bottom: 1.563vw
+
+.form-info
+	max-width: 19.3vw
+	color: $darkgrey
+	margin: 5px 0
+
+// How to srart
+.how-to-start__header
+	display: flex
+	flex-direction: column
+	width: 100%
+	align-items: center
+	margin-bottom: 2.604vw
+
+.how-to-start
+	padding-top: 3.125vw
+
+.how-to-start__title
+	margin-bottom: 0.521vw
+
+.hot-to-start__blocks
+	width: 74.896vw
+	margin: 0 auto
+
+.how-to-start__block
+	display: flex
+
+.step
+	color: $white
+	padding: 0 0.625vw
+	background: $accent
+	display: inline
+	text-transform: uppercase
+	font-size: 0.781vw
+	font-weight: 500
+	border-radius: 4px
+
+.how-to-start__img
+	max-width: 19.688vw
+
+.how-to-start__step-title
+	font-size: 25px
+	line-height: 35px
+	font-weight: 500
+	margin: 0.781vw 0
+
+.how-to-start__step-descr
+	color: $darkgrey
+	max-width: 39.375vw
+
+.how-to-start__block--even .how-to-start__image
+	margin-left: 2.865vw
+
+.how-to-start__block--odd .how-to-start__image
+	margin-right: 2.865vw
+
+.how-to-start__block--even
+	flex-direction: row-reverse
+
+.how-to-start__block--even
+	position: relative
+	margin-bottom: 7.135vw
+	&::after
+		content: ''
+		background-image: url(../images/dest/how-to-start-2-2.png)
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		height: 8.281vw
+		width: 49.479vw
+		background-repeat: no-repeat
+
+.how-to-start__block--even:last-child
+	margin-bottom: 3.333vw
+	&:after
+		display: none
+
+.how-to-start__block--odd
+	margin-bottom: 7.135vw
+	position: relative
+	&::after
+		content: ''
+		background-image: url(../images/dest/how-to-start-1-1.png)
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		height: 8.281vw
+		width: 49.479vw
+		background-repeat: no-repeat

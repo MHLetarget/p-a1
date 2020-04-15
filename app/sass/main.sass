@@ -6,8 +6,14 @@
 @import 0-base/forms
 @import 0-base/select
 @import 0-base/footer
+@import 0-base/slider
 
-@import 1-pages/home.sass
+@import 1-pages/home
+@import 1-pages/contacts
+@import 1-pages/tryforfree
+@import 1-pages/services
+@import 1-pages/blog
+@import 1-pages/blog-item
 
 // CUSTOM USER STYLES
 
@@ -33,11 +39,35 @@
 	font-family: Josefin Sans
 	font-weight: normal
 	font-style: normal
-	font-size: 50px
-	line-height: 60px
+	font-size: 2.6vw
+	line-height: 3.2vw
+	color: $textcolor
 
 .title--blue
 	color: $accent
 
 .overlay
 	background: linear-gradient(202.46deg, rgba(25, 104, 179, 0.8) -106.3%, rgba(76, 151, 221, 0.8) 73.07%)
+
+.home-button__tff--pulse,
+.contacts-button__tff--pulse
+	position: fixed
+	bottom: 4vw
+	right: 4vw
+	z-index: 42
+
+.top__bg
+	background-image: url(../images/dest/image52.jpg)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	max-height: 25.104vw
+	width: 100%
+
+.page-baner
+	height: 20.573vw
+
+@media screen and (max-width: 767px)
+	.title
+		font-size: 25px
+		line-height: 30px

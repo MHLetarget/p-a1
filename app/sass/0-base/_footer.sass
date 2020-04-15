@@ -13,34 +13,52 @@
 		color: $white
 
 .footer__block
-	padding: 30px 0
+	padding: 1.55vw 0
 	display: flex
 	width: 100%
 	flex-direction: column
 	align-items: center
 	color: $white
-	font-size: 15px
-	line-height: 25px
+	font-size: .81vw
+	line-height: 1.3vw
 	font-weight: 300
 
 .footer__soc-net
 	display: flex
 
 .footer__logo
-	font-size: 24px
-	line-height: 29px
+	font-size: 1.25vw
+	line-height: 1.5vw
 	font-weight: bold
-	margin-bottom: 16px
+	margin-bottom: .83vw
 
 .footer__email
 	margin: 3px 0
 
 .footer__soc-net
-	margin: 15px 0
+	margin: 0.81vw 0
 
 .social-item
 	margin: 0 6px
 
 .footer__privacy-policy
-	margin-bottom: 15px
+	margin-bottom: 0.81vw
 	text-decoration: underline
+
+@media screen and (max-width: 767px)
+
+	.footer__block
+		font-size: 15px
+		line-height: 25px
+
+	.footer__logo
+		font-size: 24px
+		line-height: 29px
+		margin: 30px 0 16px
+
+	.footer__soc-net
+		margin: 15px 0 16px
+
+	.footer__copyright
+		max-width: 75vw
+		text-align: center

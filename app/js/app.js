@@ -1,13 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Container Width
+  const { clientWidth } = document.body;
 
+  // Container Width
   const container = document.querySelectorAll('.container');
   container.forEach((container) => {
-    container.style.maxWidth = `${document.body.clientWidth - 30}px`;
+    if (clientWidth >= 768) {
+      container.style.maxWidth = `${clientWidth - 30}px`;
+    }	else {
+      container.style.maxWidth = `${clientWidth}px`;
+    }
   });
 
-  // Forms
+  // Width columns
+  const adapt = document.querySelector('.adapt');
+	if(adapt){
+		const adaptRow = adapt.lastElementChild.lastElementChild;
+		if (clientWidth >= 1366) {
+			adaptRow.firstElementChild.classList.add('col-md-4');
+			adaptRow.firstElementChild.classList.remove('col-md-5');
+			adaptRow.firstElementChild.classList.remove('col-12');
+		} else if (clientWidth < 768) {
+			adaptRow.firstElementChild.classList.add('col-12');
+			adaptRow.firstElementChild.classList.remove('col-md-4');
+			adaptRow.firstElementChild.classList.remove('col-md-5');
+		}	else {
+			adaptRow.firstElementChild.classList.add('col-md-5');
+			adaptRow.firstElementChild.classList.remove('col-md-4');
+			adaptRow.firstElementChild.classList.remove('col-12');
+		}
+	}
+  
 
+  // Forms
   const forms = function () {
     const { form } = document.forms;
     const inputName = form.username;
@@ -80,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.forms.form) {
     forms();
   }
-  // Select Languages
 
+  // Select Languages
   const select = function () {
     const selectHeader = document.querySelectorAll('.select__header');
     const selectItem = document.querySelectorAll('.select__item');
@@ -115,67 +139,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-	select();
-	
-	// Slider
+  select();
 
-  const mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    slidesPerView: 6,
-    spaceBetween: 65,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-      swiper: newSwiper,
-    },
-  });
+  // Home Slider
+  const homeSlider = document.querySelector('.partners__slider');
+  if (homeSlider) {
 
-  var newSwiper = new Swiper('.partners__slider-arrows', {
-    loop: true,
-    slidesPerView: 6,
-    spaceBetween: 65,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    thumbs: {
-      swiper: mySwiper,
-    },
-	});
-	
-	// Advantages Block
+      const homeSlider = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 65,
+        thumbs: {
+          swiper: addHomeSlider,
+				},
+				breakpoints: {
+					768: {
+							slidesPerView: 6,
+					}
+				}
+			});
+			
+			var addHomeSlider = new Swiper('.partners__slider-arrows', {
+				loop: true,
+				slidesPerView: 2,
+				spaceBetween: 65,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				thumbs: {
+					swiper: homeSlider,
+				},
+				breakpoints: {
+					768: {
+							slidesPerView: 6,
+					}
+				}
+			});
+    }
 
-	const advantagesRow = document.querySelector('.advantages__row')
-	advantagesRow.lastElementChild.firstElementChild.firstElementChild.style=`
-	border-right: none; border-bottom: none`
-	advantagesRow.lastElementChild.firstElementChild.firstElementChild.nextElementSibling.style=`
-	border-right: none; border-bottom: none`
-	advantagesRow.lastElementChild.firstElementChild.lastElementChild.style=`
-	border-bottom: none`
-	const advantagesRowSecond = advantagesRow.nextElementSibling
-	advantagesRowSecond.firstElementChild.firstElementChild.firstElementChild.style=`
-	border-right: none`
-	advantagesRowSecond.firstElementChild.firstElementChild.firstElementChild.nextElementSibling.style=`
-	border-right: none`
-
-	// Freight Block
-
-	const freightRow = document.querySelector('.freight__row')
-	freightRow.firstElementChild.firstElementChild.style=`
-	border-right: none; border-bottom: none`
-	freightRow.firstElementChild.firstElementChild.nextElementSibling.style=`
-	border-right: none; border-bottom: none`
-	freightRow.firstElementChild.lastElementChild.style=`
-	border-bottom: none`
-	const freightRowSecond = freightRow.nextElementSibling
-	freightRowSecond.firstElementChild.firstElementChild.style=`
-	border-right: none`
-	freightRowSecond.firstElementChild.firstElementChild.nextElementSibling.style=`
-	border-right: none`
+  // Advantages Block
+	const advantagesRow = document.querySelector('.advantages__row');
+	if (advantagesRow) {
+		if (clientWidth >= 768) {
+			advantagesRow.lastElementChild.firstElementChild.firstElementChild.style = `
+			border-right: none; border-bottom: none`;
+			advantagesRow.lastElementChild.firstElementChild.firstElementChild.nextElementSibling.style = `
+			border-right: none; border-bottom: none`;
+			advantagesRow.lastElementChild.firstElementChild.lastElementChild.style = `
+			border-bottom: none`;
+			const advantagesRowSecond = advantagesRow.nextElementSibling;
+			advantagesRowSecond.firstElementChild.firstElementChild.firstElementChild.style = `
+			border-right: none`;
+			advantagesRowSecond.firstElementChild.firstElementChild.firstElementChild.nextElementSibling.style = `
+			border-right: none`;
+		}
+	}
 
 
+
+  // Freight Block
+	const freightRow = document.querySelector('.freight__row');
+	if (freightRow) {
+		if (clientWidth >= 768) {
+			freightRow.firstElementChild.firstElementChild.style = `
+			border-right: none; border-bottom: none`;
+			freightRow.firstElementChild.firstElementChild.nextElementSibling.style = `
+			border-right: none; border-bottom: none`;
+			freightRow.firstElementChild.lastElementChild.style = `
+			border-bottom: none`;
+			const freightRowSecond = freightRow.nextElementSibling;
+			freightRowSecond.firstElementChild.firstElementChild.style = `
+			border-right: none`;
+			freightRowSecond.firstElementChild.firstElementChild.nextElementSibling.style = `
+			border-right: none`;
+		}
+	}
 
 });
