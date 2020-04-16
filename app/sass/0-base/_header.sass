@@ -1,0 +1,214 @@
+
+.header__bg
+	background-image: url(../images/dest/image45.png)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	max-height: 45.573vw
+	width: 100%
+
+.header
+	height: 4.5vw
+	border-bottom: 1px solid #88B5DE
+	display: flex
+	align-items: center
+	color: $white
+	a
+		color: $white
+		&:hover
+			color: $white
+
+.header__container,
+.header__row
+	height: 100%
+
+.logo
+	height: 100%
+	display: flex
+	align-items: center
+	&__link
+		display: flex
+		align-items: center
+	&__text
+		font-family: Montserrat
+		font-weight: bold
+		font-size: 1.3vw
+		line-height: 1.25vw
+		color: $white
+		margin-left: 6px
+	&__img
+		width: 3.6vw
+
+.menu
+	height: 100%
+
+.menu__list
+	display: flex
+	justify-content: flex-end
+	height: 100%
+
+.menu__list-item
+	margin: 0 1.55vw
+	&:last-child
+		margin-right: 4.8vw
+
+.menu__link
+	height: 100%
+	display: flex
+	align-items: center
+
+.menu__link--active
+	&::before
+		transition: 0.35s
+		content: ''
+		position: absolute
+		background: $white
+		width: 100%
+		height: 3px
+		bottom: -1.5px
+		left: 0
+
+.header__info
+	height: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.select.is-active .select__body
+		z-index: 42
+
+@media screen and (min-width: 768px)
+
+	.mobile-menu,
+	.mobile-menu__btn,
+	.header__ttf-mobile
+		display: none
+
+@media screen and (max-width: 767px)
+	.header
+		height: 64px
+
+	.header__bg
+		max-height: 640px
+
+	.mobile-menu__btn
+		position: absolute
+		right: 12px
+		top: 36px
+		font-size: 10px
+		line-height: 10px
+		text-transform: uppercase
+		width: 40px
+		text-align: center
+		&::before
+			content: ''
+			background: $white
+			height: 2px
+			width: 19px
+			position: absolute
+			top: -9px
+			left: 50%
+			transform: translateX(-50%)
+			border-radius: 100px
+			transition: 0.35s
+			transform-origin: center
+		&::after
+			content: ''
+			background: $white
+			height: 2px
+			width: 19px
+			position: absolute
+			left: 50%
+			top: -5px
+			transform: translateX(-50%)
+			border-radius: 100px
+			transition: 0.35s
+			transform-origin: center
+
+	.mobile-menu__btn.mobile-menu__btn--open
+		&::before
+			top: -10px
+			left: 50%
+			transform: translateX(-50%) rotate(45deg)
+		&::after
+			left: 50%
+			top: -100%
+			transform: translateX(-50%) rotate(-45deg)
+
+	.header__ttf-mobile
+		height: 37px
+		width: 148px
+		margin-top: 13.5px
+		display: block
+
+	.mobile-menu__link
+		font-size: 25px
+		line-height: 35px
+
+	.menu__list
+		display: none
+
+	.mobile-menu
+		display: none
+
+	.mobile-menu--open
+		z-index: 9999
+		display: flex
+		padding: 31px 15px
+		position: absolute
+		top: 64px
+		right: 0
+		bottom: 0
+		left: 0
+		background: #4F8DCA
+		overflow: hidden
+		flex-direction: column
+		align-items: flex-start
+
+	.logo
+		height: 64px
+		&__text
+			font-weight: bold
+			font-size: 13px
+			line-height: 13px
+		&__img
+			width: 36px
+
+	.header__info
+		display: none
+
+	.menu__link--active
+		&::before
+			transition: 0.35s
+			content: ''
+			position: absolute
+			background: $white
+			width: 30px
+			height: 2px
+			top: calc(50% - 1px)
+			left: 0
+	
+	.mobile-menu__link.menu__link--active
+		padding-left: 45px
+
+	.mobile-menu__list-item
+		margin-bottom: 20px
+
+	.select__mobile-lang
+		display: flex
+		margin: 20px 0 30px
+
+	.mobile-lang__item
+		font-size: 15px
+		line-height: 25px
+		color: $accent
+		margin-right: 22px
+
+	.mobile-lang__item.mobile-lang__item--active
+		color: $white
+
+	.mobile-menu__contacts-item
+		margin-bottom: 8px
+
+	.mobile-menu__soc-net
+		display: flex
+		margin-top: 22px

@@ -1,12 +1,11 @@
-.services__advantages
-	margin-top: -4.740vw
-
 .services__advantages-header
 	width: 47.604vw
 	height: 9.479vw
-	margin: 0 auto
+	margin: -4.740vw auto 0
 	box-shadow: 0px -22px 12px rgba(0, 0, 0, 0.15)
 
+.services__advantages
+	margin-top: 0
 
 // Cards
 
@@ -46,9 +45,11 @@
 	line-height: 1.302vw
 	border-bottom: 1px solid #B6D2ED
 	text-align: center
+	font-weight: 300
 
 .cards__list
 	padding: 0.625vw 1.979vw 0.833vw
+	font-weight: 300
 
 .card__button
 	text-align: center
@@ -80,5 +81,60 @@
 
 @media screen and (max-width: 767px)
 
-	.services__bg
-		max-height: 240px
+	.services__advantages-header
+		margin: -18.333vw auto 0
+		width: 92.500vw
+		height: 50.556vw
+		padding: 8.333vw 4.167vw
+		text-align: center
+		display: flex
+		align-items: center
+
+	// Cards
+	.services__cards-blocks
+		flex-direction: column
+
+	.services__cards-block
+		max-width: 91.667vw
+		margin: 0 6.667vw
+		margin-bottom: 30px
+
+	.services__cards-block:first-child
+		margin-top: 19.444vw
+
+	.card__header
+		padding: 3.333vw
+
+	.card__header-title
+		font-size: 6.944vw
+		line-height: 9.722vw
+
+	.card__header-interest
+		font-size: 13.889vw
+		line-height: 16.667vw
+
+	.card__header-descr
+		font-size: 4.167vw
+		line-height: 6.944vw
+
+	.card__descr
+		padding: 3.333vw 3.889vw
+		font-size: 4.167vw
+		line-height: 6.944vw
+
+	.cards__list
+		padding: 3.333vw 10.556vw
+		font-size: 5vw
+		line-height: 8.333vw
+
+	.card__btn
+		padding: 4.444vw 0
+		font-size: 5.556vw
+		line-height: 6.944vw
+
+	.card__list-item
+		margin-bottom: 1.111vw
+		&::before
+			width: 1.667vw
+			height: 1.667vw
+			left: -3.889vw

@@ -1,5 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const { clientWidth } = document.body;
+
+	const { clientWidth } = document.body;
+
+	// Mobile menu
+	const mobileMenu = document.querySelector('.mobile-menu')
+	const mobileMenuBtn = document.querySelector('.mobile-menu__btn')
+	let menuOpen = false;
+	mobileMenuBtn.addEventListener('click', () => {
+		if(!menuOpen){
+			mobileMenuBtn.classList.add('mobile-menu__btn--open')
+			mobileMenu.classList.add('mobile-menu--open')
+			mobileMenuBtn.innerText = 'Close'
+			document.body.style='overflow-y: hidden'
+			menuOpen = true
+		} else {
+			mobileMenuBtn.classList.remove('mobile-menu__btn--open')
+			mobileMenu.classList.remove('mobile-menu--open')
+			mobileMenuBtn.innerText = 'Menu'
+			document.body.style='overflow-y: auto'
+			menuOpen = false
+		}
+	})
+
+
+	// Mobile buttons
+	if (clientWidth < 768){
+		const circleTTFPulse = document.querySelectorAll('.circle-btn__ttf-pulse')
+		circleTTFPulse.forEach(circleTTFPulse => {
+			circleTTFPulse.r.baseVal.valueAsString = 28
+			circleTTFPulse.cy.baseVal.valueAsString = 30
+			circleTTFPulse.cx.baseVal.valueAsString = 30
+		})
+		const circleLogin = document.querySelectorAll('.circle__btn-login')
+		circleLogin.forEach(circleLogin => {
+			circleLogin.r.baseVal.valueAsString = 9
+			circleLogin.cy.baseVal.valueAsString = 10
+			circleLogin.cx.baseVal.valueAsString = 10
+		})
+		const circleTTF = document.querySelectorAll('.circle__btn-ttf')
+		circleTTF.forEach(circleTTF => {
+			circleTTF.r.baseVal.valueAsString = 9
+			circleTTF.cy.baseVal.valueAsString = 10
+			circleTTF.cx.baseVal.valueAsString = 10
+		})
+		
+	}
+	
+	
 
   // Container Width
   const container = document.querySelectorAll('.container');

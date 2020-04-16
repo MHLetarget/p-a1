@@ -30,6 +30,7 @@
 	overflow: hidden
 	font-size: 16px
 	color: $darkgrey
+	font-weight: 300
 
 .blog__view-more
 	color: $accent
@@ -90,3 +91,46 @@
 .pagination__item--active
 	background: $accent
 	color: $white
+
+@media screen and (max-width: 767px)
+	.blog__header
+		margin: -18.333vw auto 0
+		width: 92.500vw
+		height: 50.556vw
+		padding: 8.333vw 4.167vw
+		text-align: center
+		display: flex
+		align-items: center
+		font-size: 4.167vw
+		line-height: 6.944vw
+
+	.blog__items
+		max-width: 100%
+
+	.blog__item
+		margin-bottom: 11.111vw
+
+	.blog__img
+		height: 93.056vw
+		object-fit: cover
+
+	.blog__title
+		font-size: 6.944vw
+		line-height: 9.722vw
+		margin: 5.833vw 0 2.222vw
+
+	.blog__descr
+		height: 20.833vw
+		font-size: 4.167vw
+		line-height: 6.944vw
+
+	.blog__view-more
+		font-size: 4.167vw
+		line-height: 6.944vw
+		margin-top: 2.222vw
+		&::after
+			right: -3.778vw
+			width: 5.556vw
+			height: 2.778vw
+		&:hover::after
+			right: -4.778vw

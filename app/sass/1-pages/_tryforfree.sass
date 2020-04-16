@@ -21,9 +21,9 @@
 
 .tryforfree__text
 	text-align: left
-	color: $darkgrey
 	max-width: 47.656vw
 	margin: 0 auto
+	font-weight: 300
 
 .tryforfree__form
 	padding-top: 3.594vw
@@ -48,7 +48,7 @@
 .how-to-start__header
 	display: flex
 	flex-direction: column
-	width: 100%
+	max-width: 100%
 	align-items: center
 	margin-bottom: 2.604vw
 
@@ -87,6 +87,7 @@
 .how-to-start__step-descr
 	color: $darkgrey
 	max-width: 39.375vw
+	font-weight: 300
 
 .how-to-start__block--even .how-to-start__image
 	margin-left: 2.865vw
@@ -129,3 +130,92 @@
 		height: 8.281vw
 		width: 49.479vw
 		background-repeat: no-repeat
+
+@media screen and (max-width: 767px)
+
+	.tryforfree
+		padding-top: 8.333vw
+
+	.tryforfree__title
+		width: 91.667vw
+		margin-bottom: 5.556vw
+
+	.tryforfree__image
+		margin-bottom: 5.556vw
+
+	.tryforfree__img
+		max-width: 100%
+
+	.tryforfree__text
+		max-width: 91.667vw
+		font-size: 5vw
+		line-height: 8.333vw
+
+	.tryforfree__form
+		padding-top: 13.889vw
+
+	.tryforfree__form-title
+		margin-bottom: 1.944vw
+		text-align: center
+
+	.form-info
+		max-width: 91.667vw
+		margin: 1.389vw 0
+
+	.tryforfree__form
+		.button__send-message
+			margin-top: 1.389vw
+			align-self: start
+
+	// How to srart
+	.how-to-start__header
+		text-align: center
+		max-width: 91.667vw
+		margin: 0 auto 8.889vw
+
+	.how-to-start
+		margin-top: 19.444vw
+
+	.how-to-start__title
+		margin-bottom: 2.778vw
+
+	.how-to-start__descr
+		font-size: 4.167vw
+		line-height: 6.944vw
+
+	.hot-to-start__blocks
+		width: 91.667vw
+
+	.how-to-start__block
+		flex-direction: column
+		margin-bottom: 19.444vw
+
+	.step
+		padding: 0 3.333vw
+		font-size: 4.167vw
+		margin-top: 9.167vw
+
+	.how-to-start__img
+		max-width: 100%
+
+	.how-to-start__step-title
+		font-size: 6.944vw
+		line-height: 9.722vw
+		margin: 4.167vw 0
+		text-align: center
+
+	.how-to-start__text
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	.how-to-start__step-descr
+		max-width: 91.667vw
+		font-size: 5vw
+		line-height: 8.333vw
+
+
+	.how-to-start__block--even,
+	.how-to-start__block--odd
+		&::after
+			display: none
