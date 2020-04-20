@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 
 </head>
@@ -23,7 +23,6 @@
 		<header class="header overlay">
 			<div class="container header__container">
 				<div class="row header__row">
-					<div class="col-md-2 col-5">
 						<div class="logo">
 							<a class="logo__link" href="index.html">
 								<img class="logo__img" src="images/logo/logo.svg" alt="">
@@ -33,9 +32,6 @@
 								</div>
 							</a>
 						</div>
-					</div>
-					<div class="col-md-6 col-7">
-
 						<a class="header__ttf-mobile" href="tryforfree.html">
 							<button class="button__tff">
 								<div class="tff__block">
@@ -48,7 +44,6 @@
 								</div>
 							</button>
 						</a>
-						
 						<nav class="menu">
 							<ul class="menu__list">
 								<li class="menu__list-item">
@@ -57,7 +52,7 @@
 								<li class="menu__list-item">
 									<a class="menu__link link__underline" href="services.html">Services</a>
 								</li>
-								<li class="menu__list-item">
+								<li class="menu__list-item menu-item--hidden">
 									<a class="menu__link link__underline" href="blog.html">Blog</a>
 								</li>
 								<li class="menu__list-item">
@@ -65,12 +60,9 @@
 								</li>
 							</ul>
 						</nav>
-
-					</div>
-					<div class="col-md-4 col-6">
 						<div class="header__info">
-							<div class="select">
-								<div class="select__header">
+							<div class="select select-n">
+								<div class="select__header header__info-item">
 									<span class="select__current">English</span>
 									<img class="select__arrow-down" src="images/icons/arrow-down.svg" alt="">
 								</div>
@@ -79,10 +71,8 @@
 									<div class="select__item">Swiss</div>
 								</div>
 							</div>
-	
-							<a class="header__phone" href="tel:+347 903 74 85">+347 903 74 85</a>
-	
-							<button class="button__login">
+							<a class="header__phone header__info-item" href="tel:+347 903 74 85">+347 903 74 85</a>
+							<button class="button__login header__info-item">
 								<div class="button__block-arrow">
 									<svg class="button__arrow-right" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="button__arrow-right--path" d="M12.9938 3.99947L12.9995 3.99311L9.54335 0L8.50073 1.20442L10.184 3.14867H0V4.85134H10.184L8.50073 6.79584L9.54335 8L13 4.00662L12.9938 3.99947Z" fill="white"/>
@@ -93,8 +83,7 @@
 								</div>
 								Login
 							</button>
-
-								<a href="tryforfree.html">
+								<a class="header__info-item" href="tryforfree.html">
 									<button class="button__tff">
 										<div class="tff__block">
 											<div class="tff__svg-block">
@@ -106,25 +95,23 @@
 										</div>
 									</button>
 								</a>
-	
 						</div>
-					</div>
 				</div>
 			</div>
 			<div class="mobile-menu__btn">Menu</div>
 			<nav class="mobile-menu">
 				<ul class="mobile-menu__list">
-					<li class="mobile-menu__list-item">
-						<a class="mobile-menu__link link__underline menu__link--active" href="index.html">Home</a>
+					<li class="mobile-menu__list-item ">
+						<a class="mobile-menu__link mobile-menu__link--active" href="index.html">Home</a>
 					</li>
 					<li class="mobile-menu__list-item">
-						<a class="mobile-menu__link link__underline" href="services.html">Services</a>
+						<a class="mobile-menu__link" href="services.html">Services</a>
 					</li>
 					<li class="mobile-menu__list-item">
-						<a class="mobile-menu__link link__underline" href="blog.html">Blog</a>
+						<a class="mobile-menu__link" href="blog.html">Blog</a>
 					</li>
 					<li class="mobile-menu__list-item">
-						<a class="mobile-menu__link link__underline" href="contacts.html">Contacts</a>
+						<a class="mobile-menu__link" href="contacts.html">Contacts</a>
 					</li>
 				</ul>
 				<button class="button__login">
@@ -164,7 +151,6 @@
 							</div>
 						</a>
 					</div>
-				
 					<div class="social-item social-item__facebook">
 						<a href="#">
 							<div class="social-item__inner">
@@ -174,7 +160,6 @@
 							</div>
 						</a>
 					</div>
-				
 					<div class="social-item social-item__instagram">
 						<a href="#">
 							<div class="social-item__inner">
@@ -203,7 +188,6 @@
 							</div>
 						</a>
 					</div>
-				
 					<div class="social-item social-item__linkedin">
 						<a href="#">
 							<div class="social-item__inner">
@@ -283,7 +267,7 @@
 
 			<div class="adapt__header section__header">
 				<div class="title adapt__title section__title-width">We adapt <span class="title--blue">our services</span> to the needs of <span class="title--blue">our clients</span></div>
-				<div class="adapt__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
+				<div class="adapt__subtitle section__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
 			</div>
 
 			<div class="adapt__image">
@@ -297,7 +281,7 @@
 							<img class="adapt__advantages-img" src="images/icons/dispatch.svg" alt="">
 						</div>
 						<div class="adapt__advantages-content">
-							<div class="advantages-content__title">Dispatch</div>
+							<div class="adapt-content__title">Dispatch</div>
 							Personal professional experienced dispatcher (dispatcher will be dedicated to you; all our dispatchers have at least 2 years of experience), plus logistics manager (you will have not only a dispatcher but our team working for you). All company, including the owner, is available 24/7. 
 						</div>
 					</div>
@@ -306,7 +290,7 @@
 							<img class="adapt__advantages-img" src="images/icons/back-office.svg" alt="">
 						</div>
 						<div class="adapt__advantages-content">
-							<div class="advantages-content__title">Back office</div>
+							<div class="adapt-content__title">Back office</div>
 							All loads under your MC (brokers pay 100% directly to you). We send actual confirmations, have gotten from the brokers.
 						</div>
 					</div>
@@ -315,7 +299,7 @@
 							<img class="adapt__advantages-img" src="images/icons/solution.svg" alt="">
 						</div>
 						<div class="adapt__advantages-content">
-							<div class="advantages-content__title">Solutions</div>
+							<div class="adapt-content__title">Solutions</div>
 							One dispatcher take care of a maximum 4 drivers (you will definitely recognize the difference from your previous experience, when dispatchers have a lot of drivers, and no time for you to look for best loads).
 						</div>
 					</div>
@@ -340,14 +324,14 @@
 
 			<div class="advantages__header section__header">
 				<div class="title advantages__title section__title-width">Advantages of <span class="title--blue">our company</span></div>
-				<div class="advantages__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
+				<div class="advantages__subtitle section__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
 			</div>
 
 			<div class="row advantages__row">
 				<div class="advantages__image">
 					<img class="advantages__img" src="images/icons/advantages-image.svg" alt="">
 				</div>
-				<div class="col-xl-7 offset-xl-5 col-lg-8 offset-lg-4 col-md-8 offset-md-4">
+				<div class="col-xl-7 offset-xl-5 col-md-8 offset-md-4">
 					<div class="advantages__blocks">
 						<div class="advantages__block">
 							<a class="advantages__block-link" href="#">
@@ -407,7 +391,7 @@
 		<div class="container">
 			<div class="freight__header section__header">
 				<div class="title freight__title section__title-width">We provide <span class="title--blue">freight</span> for</div>
-				<div class="freight__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
+				<div class="freight__subtitle section__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
 			</div>
 			<div class="row freight__row">
 				<div class="freight__blocks">
@@ -454,13 +438,14 @@
 		<div class="container">
 			<div class="numbers__header section__header">
 				<div class="title numbers__title section__title-width">We are in <span class="title--blue">numbers</span></div>
-				<div class="numbers__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
+				<div class="numbers__subtitle section__subtitle section__title-width">We specialize in dispatching only trucks with 48' & 53' semi-trailers (Dry Van, Reefer, Flatbed)</div>
 			</div>
 			<div class="row">
 				<div class="col-xl-5 col-md-6">
 					<div class="numbers__text">
 						<div class="numbers__text-title">Better than any Cargo company</div>
-						Personal professional experienced dispatcher (dispatcher will be dedicated to you; all our dispatchers have at least 2 years of experience), plus logistics manager (you will have not only a dispatcher but our team working for you). All company, including the owner, is available 24/7.<br>Personal professional experienced dispatcher (dispatcher will be dedicated to you; all our dispatchers have at least 2 years of experience), plus logistics manager (you will have not only a dispatcher but our team working for you). All company, including the owner, is available 24/7.
+						<p>Personal professional experienced dispatcher (dispatcher will be dedicated to you; all our dispatchers have at least 2 years of experience), plus logistics manager (you will have not only a dispatcher but our team working for you). All company, including the owner, is available 24/7.</p>
+						<p>Personal professional experienced dispatcher (dispatcher will be dedicated to you; all our dispatchers have at least 2 years of experience), plus logistics manager (you will have not only a dispatcher but our team working for you). All company, including the owner, is available 24/7.</p>
 
 						<a href="tryforfree.html">
 							<button class="button__tff button__tff-numbers">
@@ -479,25 +464,27 @@
 					</div>
 				</div>
 				<div class="col-xl-6 offset-xl-1 col-md-6">
-					<div class="row">
-						<div class="numbers__block">
-							<div class="numbers__figures">+25 082</div>
-							<div class="numbers__descr">Loads</div>
+					<div class="numbers__blocks">
+						<div class="row">
+							<div class="numbers__block">
+								<div class="numbers__figures">+25 082</div>
+								<div class="numbers__descr">Loads</div>
+							</div>
+							<div class="numbers__block">
+								<div class="numbers__figures">+79</div>
+								<div class="numbers__descr">Happy clients</div>
+							</div>
 						</div>
-						<div class="numbers__block">
-							<div class="numbers__figures">+79</div>
-							<div class="numbers__descr">Happy clients</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="numbers__block">
-							<div class="numbers__figures">+23%</div>
-							<div class="numbers__descr">Clients net income
-								while working with us</div>
-						</div>
-						<div class="numbers__block">
-							<div class="numbers__figures">+15 726 920</div>
-							<div class="numbers__descr">Miles with cargo</div>
+						<div class="row">
+							<div class="numbers__block">
+								<div class="numbers__figures">+23%</div>
+								<div class="numbers__descr">Clients net income
+									while working with us</div>
+							</div>
+							<div class="numbers__block">
+								<div class="numbers__figures">+15 726 920</div>
+								<div class="numbers__descr">Miles with cargo</div>
+							</div>
 						</div>
 					</div>
 					<div class="numbers__map">
@@ -512,11 +499,11 @@
 		<div class="container">
 			<div class="partners__header section__header">
 				<div class="title partners__title section__title-width">Our <span class="title--blue">partners</span></div>
-				<div class="partners__subtitle section__title-width">Our solutions for trucking business is quite unique therefore our partnership will be the most profitable experince practice that you ever had</div>
+				<div class="partners__subtitle section__subtitle section__title-width">Our solutions for trucking business is quite unique therefore our partnership will be the most profitable experince practice that you ever had</div>
 			</div>
 			<div class="row">
 				<div class="partners__tabs">
-					<div class="partners__tabs-item">
+					<div class="partners__tabs-item partners__tabs-item--active">
 						Brookerage
 					</div>
 					<div class="partners__tabs-item">
@@ -573,10 +560,21 @@
 								</div>
 						</div>
 					</div>
-					<div class="partners__slider-arrows">
+					
+
+					<div class="swiper-container-arrows">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -668,7 +666,7 @@
 	</div>
 	</footer>
 
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="js/swiper.min.js"></script>
 	<script src="js/app.min.js"></script>
 
 </body>

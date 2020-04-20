@@ -2,6 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const { clientWidth } = document.body;
 
+	// Footer map scroll
+	const contactMapBlock = document.querySelector('.contacts__map-block')
+	if (clientWidth <= 1366 && contactMapBlock && clientWidth > 576) {
+		const footer = document.querySelector('footer')
+		let foterHeight = footer.clientHeight
+	
+		$(document).ready(function(){
+			$("#sticker").sticky({
+				topSpacing:0,
+				bottomSpacing:foterHeight
+			});
+		});
+	}
+
+	// Header Fixed
+	// const scrollTop = window.pageYOffset
+	window.addEventListener('scroll', () => {
+		const header = document.querySelector('.header')
+		if (window.pageYOffset > 900) {
+			header.classList.add('header--fixed')
+		} else {
+			header.classList.remove('header--fixed')
+		}
+	})
+
 	// Mobile menu
 	const mobileMenu = document.querySelector('.mobile-menu')
 	const mobileMenuBtn = document.querySelector('.mobile-menu__btn')
@@ -24,27 +49,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	// Mobile buttons
-	if (clientWidth < 768){
-		const circleTTFPulse = document.querySelectorAll('.circle-btn__ttf-pulse')
-		circleTTFPulse.forEach(circleTTFPulse => {
-			circleTTFPulse.r.baseVal.valueAsString = 28
-			circleTTFPulse.cy.baseVal.valueAsString = 30
-			circleTTFPulse.cx.baseVal.valueAsString = 30
-		})
-		const circleLogin = document.querySelectorAll('.circle__btn-login')
-		circleLogin.forEach(circleLogin => {
-			circleLogin.r.baseVal.valueAsString = 9
-			circleLogin.cy.baseVal.valueAsString = 10
-			circleLogin.cx.baseVal.valueAsString = 10
-		})
-		const circleTTF = document.querySelectorAll('.circle__btn-ttf')
-		circleTTF.forEach(circleTTF => {
-			circleTTF.r.baseVal.valueAsString = 9
-			circleTTF.cy.baseVal.valueAsString = 10
-			circleTTF.cx.baseVal.valueAsString = 10
-		})
-		
+	const circleTTFPulse = document.querySelectorAll('.circle-btn__ttf-pulse')
+	const circleLogin = document.querySelectorAll('.circle__btn-login')
+	const circleTTF = document.querySelectorAll('.circle__btn-ttf')
+	if (circleTTFPulse || circleLogin || circleTTF) {
+		if (clientWidth <= 576){
+			circleTTFPulse.forEach(circleTTFPulse => {
+				circleTTFPulse.r.baseVal.valueAsString = 28
+				circleTTFPulse.cy.baseVal.valueAsString = 30
+				circleTTFPulse.cx.baseVal.valueAsString = 30
+			})
+			circleLogin.forEach(circleLogin => {
+				circleLogin.r.baseVal.valueAsString = 9
+				circleLogin.cy.baseVal.valueAsString = 10
+				circleLogin.cx.baseVal.valueAsString = 10
+			})
+			circleTTF.forEach(circleTTF => {
+				circleTTF.r.baseVal.valueAsString = 9
+				circleTTF.cy.baseVal.valueAsString = 10
+				circleTTF.cx.baseVal.valueAsString = 10
+			})
+		} else if (clientWidth > 576 && clientWidth <= 1366) {
+			circleTTFPulse.forEach(circleTTFPulse => {
+				circleTTFPulse.r.baseVal.valueAsString = 24
+				circleTTFPulse.cy.baseVal.valueAsString = 27
+				circleTTFPulse.cx.baseVal.valueAsString = 27
+			})
+			circleLogin.forEach(circleLogin => {
+				circleLogin.r.baseVal.valueAsString = 8
+				circleLogin.cy.baseVal.valueAsString = 9
+				circleLogin.cx.baseVal.valueAsString = 9
+			})
+			circleTTF.forEach(circleTTF => {
+				circleTTF.r.baseVal.valueAsString = 8
+				circleTTF.cy.baseVal.valueAsString = 9
+				circleTTF.cx.baseVal.valueAsString = 9
+			})
+		}
 	}
+
 	
 	
 
@@ -63,17 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(adapt){
 		const adaptRow = adapt.lastElementChild.lastElementChild;
 		if (clientWidth >= 1366) {
-			adaptRow.firstElementChild.classList.add('col-md-4');
-			adaptRow.firstElementChild.classList.remove('col-md-5');
-			adaptRow.firstElementChild.classList.remove('col-12');
-		} else if (clientWidth < 768) {
-			adaptRow.firstElementChild.classList.add('col-12');
-			adaptRow.firstElementChild.classList.remove('col-md-4');
-			adaptRow.firstElementChild.classList.remove('col-md-5');
+			adaptRow.firstElementChild.classList.add('col-xl-4');
+			adaptRow.firstElementChild.classList.remove('col-xl-5', 'col-12');
+		} else if (clientWidth < 576) {
+			adaptRow.firstElementChild.classList.add('col-12', 'col-12');
+			adaptRow.firstElementChild.classList.remove('col-xl-4', 'col-xl-5');
 		}	else {
-			adaptRow.firstElementChild.classList.add('col-md-5');
-			adaptRow.firstElementChild.classList.remove('col-md-4');
-			adaptRow.firstElementChild.classList.remove('col-12');
+			adaptRow.firstElementChild.classList.add('col-xl-5', 'col-lg-6');
+			adaptRow.firstElementChild.classList.remove('col-lg-4', 'col-12');
 		}
 	}
   
@@ -189,24 +229,24 @@ document.addEventListener('DOMContentLoaded', () => {
   select();
 
   // Home Slider
-  const homeSlider = document.querySelector('.partners__slider');
-  if (homeSlider) {
-
-      const homeSlider = new Swiper('.swiper-container', {
-        loop: true,
-        slidesPerView: 2,
-        spaceBetween: 65,
-        thumbs: {
-          swiper: addHomeSlider,
+		var homeSlider = new Swiper('.swiper-container', {
+			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 65,
+			thumbs: {
+				swiper: homeSliderArrows,
+			},
+			breakpoints: {
+				768: {
+						slidesPerView: 3,
 				},
-				breakpoints: {
-					768: {
-							slidesPerView: 6,
-					}
-				}
-			});
+				992: {
+						slidesPerView: 6,
+				},
+			}
+		});
 			
-			var addHomeSlider = new Swiper('.partners__slider-arrows', {
+			var homeSliderArrows = new Swiper('.swiper-container-arrows', {
 				loop: true,
 				slidesPerView: 2,
 				spaceBetween: 65,
@@ -219,11 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
 				},
 				breakpoints: {
 					768: {
+							slidesPerView: 3,
+					},
+					992: {
 							slidesPerView: 6,
 					}
 				}
 			});
-    }
 
   // Advantages Block
 	const advantagesRow = document.querySelector('.advantages__row');
